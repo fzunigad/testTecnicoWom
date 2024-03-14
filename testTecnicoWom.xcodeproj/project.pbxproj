@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		64F5D95A2BA397F400812BF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F5D9592BA397F400812BF8 /* AppDelegate.swift */; };
 		64F5D95C2BA397F400812BF8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F5D95B2BA397F400812BF8 /* SceneDelegate.swift */; };
-		64F5D95E2BA397F400812BF8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F5D95D2BA397F400812BF8 /* ViewController.swift */; };
 		64F5D9612BA397F400812BF8 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 64F5D9602BA397F400812BF8 /* Base */; };
 		64F5D9632BA397F500812BF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64F5D9622BA397F500812BF8 /* Assets.xcassets */; };
 		64F5D9662BA397F500812BF8 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 64F5D9652BA397F500812BF8 /* Base */; };
+		64F5D9712BA39B9600812BF8 /* MusicListCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F5D9702BA39B9600812BF8 /* MusicListCollectionViewController.swift */; };
+		64F5D9732BA39BDB00812BF8 /* FavoriteMusicListCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F5D9722BA39BDB00812BF8 /* FavoriteMusicListCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		64F5D9562BA397F400812BF8 /* testTecnicoWom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testTecnicoWom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64F5D9592BA397F400812BF8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		64F5D95B2BA397F400812BF8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		64F5D95D2BA397F400812BF8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		64F5D9602BA397F400812BF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		64F5D9622BA397F500812BF8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		64F5D9652BA397F500812BF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		64F5D9672BA397F500812BF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		64F5D9702BA39B9600812BF8 /* MusicListCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicListCollectionViewController.swift; sourceTree = "<group>"; };
+		64F5D9722BA39BDB00812BF8 /* FavoriteMusicListCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteMusicListCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,40 @@
 		64F5D9582BA397F400812BF8 /* testTecnicoWom */ = {
 			isa = PBXGroup;
 			children = (
+				64F5D96D2BA39B1600812BF8 /* Screens */,
 				64F5D9592BA397F400812BF8 /* AppDelegate.swift */,
 				64F5D95B2BA397F400812BF8 /* SceneDelegate.swift */,
-				64F5D95D2BA397F400812BF8 /* ViewController.swift */,
 				64F5D95F2BA397F400812BF8 /* Main.storyboard */,
 				64F5D9622BA397F500812BF8 /* Assets.xcassets */,
 				64F5D9642BA397F500812BF8 /* LaunchScreen.storyboard */,
 				64F5D9672BA397F500812BF8 /* Info.plist */,
 			);
 			path = testTecnicoWom;
+			sourceTree = "<group>";
+		};
+		64F5D96D2BA39B1600812BF8 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				64F5D96F2BA39B2F00812BF8 /* FavoriteMusicList */,
+				64F5D96E2BA39B2500812BF8 /* MusicList */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		64F5D96E2BA39B2500812BF8 /* MusicList */ = {
+			isa = PBXGroup;
+			children = (
+				64F5D9702BA39B9600812BF8 /* MusicListCollectionViewController.swift */,
+			);
+			path = MusicList;
+			sourceTree = "<group>";
+		};
+		64F5D96F2BA39B2F00812BF8 /* FavoriteMusicList */ = {
+			isa = PBXGroup;
+			children = (
+				64F5D9722BA39BDB00812BF8 /* FavoriteMusicListCollectionViewController.swift */,
+			);
+			path = FavoriteMusicList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +165,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				64F5D95E2BA397F400812BF8 /* ViewController.swift in Sources */,
 				64F5D95A2BA397F400812BF8 /* AppDelegate.swift in Sources */,
 				64F5D95C2BA397F400812BF8 /* SceneDelegate.swift in Sources */,
+				64F5D9732BA39BDB00812BF8 /* FavoriteMusicListCollectionViewController.swift in Sources */,
+				64F5D9712BA39B9600812BF8 /* MusicListCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +328,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,6 +336,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = cl.southmangostudios.testTecnicoWom;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -328,6 +361,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -335,6 +369,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = cl.southmangostudios.testTecnicoWom;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
