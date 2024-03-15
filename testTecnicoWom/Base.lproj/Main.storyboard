@@ -28,7 +28,7 @@
             </objects>
             <point key="canvasLocation" x="-610" y="-319"/>
         </scene>
-        <!--Favoritos-->
+        <!--Favorites-->
         <scene sceneID="cpf-vr-LdP">
             <objects>
                 <collectionViewController id="0sp-W7-CLw" customClass="FavoriteMusicListCollectionViewController" customModule="testTecnicoWom" customModuleProvider="target" sceneMemberID="viewController">
@@ -57,10 +57,9 @@
                                                 <constraint firstAttribute="width" constant="160" id="LwZ-tU-366"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eRV-or-hNA">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="titleLabel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eRV-or-hNA">
                                             <rect key="frame" x="0.0" y="115" width="160" height="35"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="160" id="dLg-g4-rdH"/>
                                                 <constraint firstAttribute="height" constant="35" id="kKe-Xb-9Ph"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="10"/>
@@ -89,7 +88,7 @@
                             <outlet property="delegate" destination="0sp-W7-CLw" id="WPQ-hG-jT1"/>
                         </connections>
                     </collectionView>
-                    <tabBarItem key="tabBarItem" title="Favoritos" image="star" catalog="system" id="LhS-mx-luV"/>
+                    <tabBarItem key="tabBarItem" title="Favorites" image="star" catalog="system" id="LhS-mx-luV"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vYn-M7-2an" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -124,10 +123,9 @@
                                                 <constraint firstAttribute="height" constant="115" id="HYi-t4-4kW"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ofC-5T-9lO">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="titleLabel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ofC-5T-9lO">
                                             <rect key="frame" x="0.0" y="115" width="160" height="35"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="160" id="Ho9-gM-q3L"/>
                                                 <constraint firstAttribute="height" constant="35" id="aTQ-0W-WYO"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="10"/>
@@ -174,42 +172,41 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HkU-qo-Hvl">
                                 <rect key="frame" x="10" y="113" width="373" height="200"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="2ct-UM-ukI"/>
                                     <constraint firstAttribute="height" constant="200" id="Oz8-qp-QBA"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titulo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6fh-YN-Lw4">
-                                <rect key="frame" x="15" y="378.33333333333331" width="47" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6fh-YN-Lw4">
+                                <rect key="frame" x="15" y="378.33333333333331" width="368" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="artistLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RYK-JM-dUZ">
-                                <rect key="frame" x="15" y="349.33333333333331" width="80.333333333333329" height="21"/>
+                                <rect key="frame" x="15" y="349.33333333333331" width="368" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="titleLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vtV-7B-SmC">
-                                <rect key="frame" x="15" y="407.33333333333331" width="70" height="21"/>
+                                <rect key="frame" x="15" y="407.33333333333331" width="368" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Album" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5f-AZ-MNx">
-                                <rect key="frame" x="15" y="436.33333333333331" width="53" height="21"/>
+                                <rect key="frame" x="15" y="436.33333333333331" width="368" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artista" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rEZ-Ev-pog">
-                                <rect key="frame" x="14.999999999999996" y="321" width="55.666666666666657" height="20.333333333333314"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rEZ-Ev-pog">
+                                <rect key="frame" x="15" y="321" width="368" height="20.333333333333314"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="albumLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RKh-22-p9q">
-                                <rect key="frame" x="15" y="465.33333333333331" width="89" height="21"/>
+                                <rect key="frame" x="15" y="465.33333333333331" width="368" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -227,10 +224,16 @@
                             <constraint firstItem="A5f-AZ-MNx" firstAttribute="leading" secondItem="Lpo-hH-Trf" secondAttribute="leading" constant="15" id="MeF-d7-TnF"/>
                             <constraint firstItem="vtV-7B-SmC" firstAttribute="top" secondItem="6fh-YN-Lw4" secondAttribute="bottom" constant="8" symbolic="YES" id="OIF-BS-BjA"/>
                             <constraint firstItem="RYK-JM-dUZ" firstAttribute="top" secondItem="rEZ-Ev-pog" secondAttribute="bottom" constant="8" symbolic="YES" id="P5t-Po-rd6"/>
+                            <constraint firstItem="Lpo-hH-Trf" firstAttribute="trailing" secondItem="vtV-7B-SmC" secondAttribute="trailing" constant="10" id="PbM-L2-TbD"/>
                             <constraint firstItem="6fh-YN-Lw4" firstAttribute="top" secondItem="RYK-JM-dUZ" secondAttribute="bottom" constant="8" symbolic="YES" id="Phl-WA-FK0"/>
+                            <constraint firstItem="Lpo-hH-Trf" firstAttribute="trailing" secondItem="A5f-AZ-MNx" secondAttribute="trailing" constant="10" id="V9E-N0-Itg"/>
+                            <constraint firstItem="Lpo-hH-Trf" firstAttribute="trailing" secondItem="6fh-YN-Lw4" secondAttribute="trailing" constant="10" id="VVI-s8-owB"/>
                             <constraint firstItem="A5f-AZ-MNx" firstAttribute="top" secondItem="vtV-7B-SmC" secondAttribute="bottom" constant="8" symbolic="YES" id="Zsv-o5-RnP"/>
                             <constraint firstItem="6fh-YN-Lw4" firstAttribute="leading" secondItem="Lpo-hH-Trf" secondAttribute="leading" constant="15" id="gC4-OP-MMq"/>
                             <constraint firstItem="RKh-22-p9q" firstAttribute="top" secondItem="A5f-AZ-MNx" secondAttribute="bottom" constant="8" symbolic="YES" id="gjp-FU-Cgc"/>
+                            <constraint firstItem="Lpo-hH-Trf" firstAttribute="trailing" secondItem="RYK-JM-dUZ" secondAttribute="trailing" constant="10" id="kOs-JU-Rcl"/>
+                            <constraint firstItem="Lpo-hH-Trf" firstAttribute="trailing" secondItem="RKh-22-p9q" secondAttribute="trailing" constant="10" id="mQt-WV-93K"/>
+                            <constraint firstItem="Lpo-hH-Trf" firstAttribute="trailing" secondItem="rEZ-Ev-pog" secondAttribute="trailing" constant="10" id="oyO-bl-8cd"/>
                             <constraint firstItem="vtV-7B-SmC" firstAttribute="leading" secondItem="Lpo-hH-Trf" secondAttribute="leading" constant="15" id="tMV-iT-2uN"/>
                             <constraint firstItem="RYK-JM-dUZ" firstAttribute="leading" secondItem="Lpo-hH-Trf" secondAttribute="leading" constant="15" id="yRN-ql-u3t"/>
                         </constraints>
@@ -256,11 +259,11 @@
             </objects>
             <point key="canvasLocation" x="2217.5572519083967" y="-508.45070422535213"/>
         </scene>
-        <!--Listado Musica-->
+        <!--Music List-->
         <scene sceneID="am0-gg-dhA">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yWS-La-6Ag" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Listado Musica" image="music.note.list" catalog="system" id="QAe-bt-NRZ"/>
+                    <tabBarItem key="tabBarItem" title="Music List" image="music.note.list" catalog="system" id="QAe-bt-NRZ"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="PWb-m4-PRL">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
