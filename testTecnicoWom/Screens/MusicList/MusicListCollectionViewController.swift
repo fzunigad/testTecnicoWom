@@ -7,13 +7,11 @@
 
 import UIKit
 
-private let reuseIdentifier = "Cell"
 private var songs : [Song] = []
 
+private let reuseIdentifier = "Cell"
 
 class MusicListCollectionViewController: UICollectionViewController {
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
 

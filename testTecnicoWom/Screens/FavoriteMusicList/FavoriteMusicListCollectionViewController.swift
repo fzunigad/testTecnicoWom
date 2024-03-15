@@ -9,8 +9,20 @@ import UIKit
 
 private let reuseIdentifier = "Cell"
 
-class FavoriteMusicListCollectionViewController: UICollectionViewController {
+private var songs : [Song] {
+    if let objects = UserDefaults.standard.value(forKey: "songs") as? Data {
+       let decoder = JSONDecoder()
+       if let objectsDecoded = try? decoder.decode(Array.self, from: objects) as [Song] {
+           return objectsDecoded
+       }
+    }
+    
+    return [Song]()
+}
 
+class FavoriteMusicListCollectionViewController: UICollectionViewController {
+    let defaults = UserDefaults.standard
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,8 +31,14 @@ class FavoriteMusicListCollectionViewController: UICollectionViewController {
 
         // Register cell classes
         self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        
+
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.collectionView.reloadData()
     }
 
     /*
@@ -37,19 +55,24 @@ class FavoriteMusicListCollectionViewController: UICollectionViewController {
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 0
+        return songs.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "musicDataCell", for: indexPath) as! MusicListCollectionViewCell
+        
+        let song = songs[indexPath.row]
+        if let url = URL(string: song.image) {
+            cell.songAlbumImageView.load(url: url)
+        }
     
-        // Configure the cell
+        cell.songNameLabel.text = song.title
     
         return cell
     }

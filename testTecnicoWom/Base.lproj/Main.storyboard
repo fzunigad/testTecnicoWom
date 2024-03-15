@@ -37,19 +37,51 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="kra-75-TlB">
-                            <size key="itemSize" width="128" height="128"/>
+                            <size key="itemSize" width="160" height="150"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <inset key="sectionInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Vhi-3C-bVl">
-                                <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="musicDataCell" id="zg9-je-jdy" customClass="MusicListCollectionViewCell" customModule="testTecnicoWom" customModuleProvider="target">
+                                <rect key="frame" x="10" y="0.0" width="160" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="haI-5K-X6M">
-                                    <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
-                                    <autoresizingMask key="autoresizingMask"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="4xo-TR-3zV">
+                                    <rect key="frame" x="0.0" y="0.0" width="160" height="150"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="g2m-O8-EBx">
+                                            <rect key="frame" x="0.0" y="0.0" width="160" height="115"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="115" id="922-i1-YpL"/>
+                                                <constraint firstAttribute="width" constant="160" id="LwZ-tU-366"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eRV-or-hNA">
+                                            <rect key="frame" x="0.0" y="115" width="160" height="35"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="160" id="dLg-g4-rdH"/>
+                                                <constraint firstAttribute="height" constant="35" id="kKe-Xb-9Ph"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="g2m-O8-EBx" firstAttribute="leading" secondItem="4xo-TR-3zV" secondAttribute="leading" id="5oz-hQ-AWG"/>
+                                        <constraint firstAttribute="trailing" secondItem="g2m-O8-EBx" secondAttribute="trailing" id="S5K-rx-vlA"/>
+                                        <constraint firstAttribute="trailing" secondItem="eRV-or-hNA" secondAttribute="trailing" id="dd3-rf-8xn"/>
+                                        <constraint firstItem="g2m-O8-EBx" firstAttribute="top" secondItem="4xo-TR-3zV" secondAttribute="top" id="dnf-Sf-uch"/>
+                                        <constraint firstItem="eRV-or-hNA" firstAttribute="leading" secondItem="4xo-TR-3zV" secondAttribute="leading" id="mcI-cD-9we"/>
+                                        <constraint firstAttribute="bottom" secondItem="eRV-or-hNA" secondAttribute="bottom" id="uLF-1g-Zcp"/>
+                                        <constraint firstItem="eRV-or-hNA" firstAttribute="top" secondItem="g2m-O8-EBx" secondAttribute="bottom" id="znl-18-ak8"/>
+                                    </constraints>
                                 </collectionViewCellContentView>
+                                <connections>
+                                    <outlet property="songAlbumImageView" destination="g2m-O8-EBx" id="XMp-yY-Mmy"/>
+                                    <outlet property="songNameLabel" destination="eRV-or-hNA" id="e8p-q8-jG9"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -203,11 +235,20 @@
                             <constraint firstItem="RYK-JM-dUZ" firstAttribute="leading" secondItem="Lpo-hH-Trf" secondAttribute="leading" constant="15" id="yRN-ql-u3t"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="qxG-Fg-zcM"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="vgb-fV-nE6">
+                        <barButtonItem key="rightBarButtonItem" image="star" catalog="system" id="F9U-u7-ayI">
+                            <connections>
+                                <action selector="favoriteNavBarItemClicked:" destination="Xkn-1Y-qOy" id="N03-yu-khX"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="AlbumImageView" destination="HkU-qo-Hvl" id="E6m-NE-jjx"/>
                         <outlet property="albumLabel" destination="RKh-22-p9q" id="mSG-ZD-sPs"/>
                         <outlet property="artistLabel" destination="RYK-JM-dUZ" id="1q1-rH-byG"/>
+                        <outlet property="favoriteNavBarItem" destination="F9U-u7-ayI" id="bgw-Wn-bsl"/>
                         <outlet property="titleLabel" destination="vtV-7B-SmC" id="ZjA-9d-P8s"/>
                     </connections>
                 </viewController>

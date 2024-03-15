@@ -19,17 +19,19 @@ struct Song: Codable, Hashable {
     var title:String
     var artist: String
     var album: String
+    var isFavorited: Bool?
     
     func hash(into hasher: inout Hasher) {
         hasher.combine(id)
     }
     
-    init(id: Int, image: String, title: String, artist: String, album: String) {
+    init(id: Int, image: String, title: String, artist: String, album: String, isFavorited: Bool) {
         self.id = id
         self.image = image
         self.title = title
         self.artist = artist
         self.album = album
+        self.isFavorited = isFavorited
     }
     
     static func == (lhs: Song, rhs: Song) -> Bool {
@@ -43,6 +45,7 @@ struct Song: Codable, Hashable {
         case artist = "artistName"
         case album = "collectionName"
     }
+    
 }
 
 
